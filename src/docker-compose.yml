@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  myAppNetwork:
+    driver: bridge
+
+services:
+
+  SqlServerDb:
+    container_name: SqlServerContainer
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "5001:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SecureP@ssw0rd123
+    networks:
+      - myAppNetwork
+
+  WebApi:
+    container_name: WebApiContainer
+    image: ${DOCKER_REGISTRY-}backendapi
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - SqlServerDb
+    networks:
+      - myAppNetwork

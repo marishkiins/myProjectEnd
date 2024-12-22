@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BackendApi</name>
+    </assembly>
+    <members>
+        <member name="M:BackendApi.Controllers.TasksController.GetAll">
+             <summary>
+             Все задачи
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 GETall /Todo
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TasksController.GetById(System.Int32)">
+             <summary>
+             Поиск задачи по id
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 GETbyId /Todo
+                 {
+                    "id" : "1"
+                 }
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TasksController.Add(BackendApi.Contracts.User.CreateTaskRequest)">
+             <summary>
+             Создание новой задачи
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "UserId" : "1",
+                    "TypeId" : "1",
+                    "PriorityId" : "1",
+                    "StatusId" : "1",
+                    "SubjectId" : "1",
+                    "CategoryId" : "1",
+                    "Description" : "Description",
+                    "Deadline" : "01.01.2030",
+                 }
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TasksController.Update(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.DateTime)">
+             <summary>
+             Изменение данных задач
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 PUT /Todo
+                 {
+                    "userId" : "1",
+                    "TypeId" : "1",
+                    "PriorityId" : "1",
+                    "StatusId" : "1",
+                    "SubjectId" : "1",
+                    "CategoryId" : "1",
+                    "Description" : "Description",
+                    "Deadline" : "01.01.2030",
+                 }
+            
+             </remarks>
+             <param name="id">id задачи</param>
+             <param name="userId">id пользователя</param>
+             <param name="typeId">id типа задачи</param>
+             <param name="priorityId">id приоритета задачи</param>
+             <param name="statusId">id статуса задачи</param>
+             <param name="subjectId">id предмета</param>
+             <param name="categoryId">id</param>
+             <param name="description"></param>
+             <param name="deadline"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TasksController.Delete(System.Int32)">
+             <summary>
+             Удаление задачи
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 DELETE /Todo
+                 {
+                     "id" : "1",
+                    "email" : "A4Tech Bloody B188",
+                    "password" : "!Pa$$word123@",
+                 }
+            
+             </remarks>
+             <param name="id">id задачи</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UserController.GetAll">
+             <summary>
+             Все пользователи
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 GETall /Todo
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UserController.GetById(System.Int32)">
+             <summary>
+             Поиск пользователя по id
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 GETbyId /Todo
+                 {
+                    "id" : "1"
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UserController.Add(BackendApi.Contracts.User.CreateUserRequest)">
+             <summary>
+             Создание нового пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 POST /Todo
+                 {
+                    "email" : "A4Tech Bloody B188",
+                    "password" : "!Pa$$word123@",
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UserController.Update(System.Int32,System.String,System.String)">
+             <summary>
+             Изменение данных пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 PUT /Todo
+                 {
+                    "id" : "1",
+                    "email" : "vjt13hh",
+                    "password" : "!Pa$$word123@",
+                 }
+            
+             </remarks>
+             <param name="id">id пользователя</param>
+             <param name="email">логин пользователя</param>
+             <param name="password">пароль пользователя</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UserController.Delete(System.Int32)">
+             <summary>
+             Удаление пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 DELETE /Todo
+                 {
+                     "id" : "1",
+                    "email" : "A4Tech Bloody B188",
+                    "password" : "!Pa$$word123@",
+                 }
+            
+             </remarks>
+             <param name="id">id пользователя</param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

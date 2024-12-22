@@ -1,0 +1,403 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Интернет-магазин API",
+    "description": "Краткое описание вашего API",
+    "contact": {
+      "name": "Пример контакта",
+      "url": "https://example.com/contact"
+    },
+    "license": {
+      "name": "Пример лицензии",
+      "url": "https://example.com/license"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Tasks": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Все пользователи",
+        "description": "Пример запроса:\r\n            \r\n    GETall /Todo",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Создание нового пользователя",
+        "description": "Пример запроса:\r\n            \r\n    POST /Todo\r\n    {\r\n       \"UserId\" : \"1\",\r\n       \"TypeId\" : \"1\",\r\n       \"PriorityId\" : \"1\",\r\n       \"StatusId\" : \"1\",\r\n       \"SubjectId\" : \"1\",\r\n       \"CategoryId\" : \"1\",\r\n       \"Description\" : \"Description\",\r\n       \"Deadline\" : \"01.01.2030\",\r\n    }",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTaskRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTaskRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTaskRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Изменение данных пользователя",
+        "description": "Пример запроса:\r\n            \r\n    PUT /Todo\r\n    {\r\n       \"userId\" : \"1\",\r\n       \"TypeId\" : \"1\",\r\n       \"PriorityId\" : \"1\",\r\n       \"StatusId\" : \"1\",\r\n       \"SubjectId\" : \"1\",\r\n       \"CategoryId\" : \"1\",\r\n       \"Description\" : \"Description\",\r\n       \"Deadline\" : \"01.01.2030\",\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id задачи",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "id пользователя",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "typeId",
+            "in": "query",
+            "description": "id типа задачи",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "priorityId",
+            "in": "query",
+            "description": "id приоритета задачи",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "statusId",
+            "in": "query",
+            "description": "id статуса задачи",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "subjectId",
+            "in": "query",
+            "description": "id предмета",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "id",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deadline",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Удаление пользователя",
+        "description": "Пример запроса:\r\n            \r\n    DELETE /Todo\r\n    {\r\n        \"id\" : \"1\",\r\n       \"email\" : \"A4Tech Bloody B188\",\r\n       \"password\" : \"!Pa$$word123@\",\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id задачи",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tasks/{id}": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Поиск пользователя по id",
+        "description": "Пример запроса:\r\n            \r\n    GETbyId /Todo\r\n    {\r\n       \"id\" : \"1\"\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Все пользователи",
+        "description": "Пример запроса:\r\n            \r\n    GETall /Todo",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Создание нового пользователя",
+        "description": "Пример запроса:\r\n            \r\n    POST /Todo\r\n    {\r\n       \"email\" : \"A4Tech Bloody B188\",\r\n       \"password\" : \"!Pa$$word123@\",\r\n    }",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Изменение данных пользователя",
+        "description": "Пример запроса:\r\n            \r\n    PUT /Todo\r\n    {\r\n       \"id\" : \"1\",\r\n       \"email\" : \"vjt13hh\",\r\n       \"password\" : \"!Pa$$word123@\",\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id пользователя",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "description": "логин пользователя",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "пароль пользователя",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Удаление пользователя",
+        "description": "Пример запроса:\r\n            \r\n    DELETE /Todo\r\n    {\r\n        \"id\" : \"1\",\r\n       \"email\" : \"A4Tech Bloody B188\",\r\n       \"password\" : \"!Pa$$word123@\",\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id пользователя",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Поиск пользователя по id",
+        "description": "Пример запроса:\r\n            \r\n    GETbyId /Todo\r\n    {\r\n       \"id\" : \"1\"\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateTaskRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "priorityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "statusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subjectId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
