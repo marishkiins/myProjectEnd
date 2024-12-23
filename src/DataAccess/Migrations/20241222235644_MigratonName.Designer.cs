@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(SmirnovaPlanGoDbContext))]
-    [Migration("20241222233201_MigratonName")]
+    [Migration("20241222235644_MigratonName")]
     partial class MigratonName
     {
         /// <inheritdoc />

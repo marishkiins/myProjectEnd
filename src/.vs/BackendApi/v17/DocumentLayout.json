@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA24AE9B-464C-4A1C-A573-DDE069309954}|DataAccess\\DataAccess.csproj|c:\\users\\smirn\\desktop\\myproject\\src\\dataaccess\\migrations\\20241222235644_migratonname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24AE9B-464C-4A1C-A573-DDE069309954}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\migrations\\20241222235644_migratonname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C84A86A-9C6E-41CE-887A-AB5121CAD168}|BackendApi\\BackendApi.csproj|c:\\users\\smirn\\desktop\\myproject\\src\\backendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0C84A86A-9C6E-41CE-887A-AB5121CAD168}|BackendApi\\BackendApi.csproj|solutionrelative:backendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0C84A86A-9C6E-41CE-887A-AB5121CAD168}|BackendApi\\BackendApi.csproj|c:\\users\\smirn\\desktop\\myproject\\src\\backendapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C84A86A-9C6E-41CE-887A-AB5121CAD168}|BackendApi\\BackendApi.csproj|solutionrelative:backendapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA24AE9B-464C-4A1C-A573-DDE069309954}|DataAccess\\DataAccess.csproj|c:\\users\\smirn\\desktop\\myproject\\src\\dataaccess\\migrations\\20241222231039_seeddatamigration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA24AE9B-464C-4A1C-A573-DDE069309954}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\migrations\\20241222231039_seeddatamigration1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20241222231039_SeedDataMigration1.cs",
-              "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\DataAccess\\Migrations\\20241222231039_SeedDataMigration1.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Migrations\\20241222231039_SeedDataMigration1.cs",
-              "ToolTip": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\DataAccess\\Migrations\\20241222231039_SeedDataMigration1.cs",
-              "RelativeToolTip": "DataAccess\\Migrations\\20241222231039_SeedDataMigration1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20241222235644_MigratonName.cs",
+              "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\DataAccess\\Migrations\\20241222235644_MigratonName.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Migrations\\20241222235644_MigratonName.cs",
+              "ToolTip": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\DataAccess\\Migrations\\20241222235644_MigratonName.cs",
+              "RelativeToolTip": "DataAccess\\Migrations\\20241222235644_MigratonName.cs",
+              "ViewState": "AgIAAFwCAAAAAAAAAAAqwDwCAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T23:10:39.89Z",
+              "WhenOpened": "2024-12-22T23:56:44.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Task.cs",
               "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\Domain\\Models\\Task.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Task.cs",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\BackendApi\\Program.cs",
               "RelativeDocumentMoniker": "BackendApi\\Program.cs",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SmirnovaPlanGoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\Domain\\Models\\SmirnovaPlanGoDbContext.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\SmirnovaPlanGoDbContext.cs",
@@ -83,16 +83,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\BackendApi\\appsettings.json",
               "RelativeDocumentMoniker": "BackendApi\\appsettings.json",
               "ToolTip": "C:\\Users\\Smirn\\Desktop\\myProject\\src\\BackendApi\\appsettings.json",
               "RelativeToolTip": "BackendApi\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-22T17:32:36.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T17:32:36.364Z"
             }
           ]
         }
